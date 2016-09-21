@@ -1,0 +1,172 @@
+<include file="./Admin/Public/html/nav.html" />	
+	<div id="main-content"> <!-- Main Content Section with everything -->
+		<h2>欢迎管理员 <?php echo $uname;?></h2>
+		<p id="page-intro">课程表管理</p>
+		<div class="clear"></div>
+		<a href="#" id="edit" class="button">修改课程表</a><br /><br />
+		<div class="content-box">
+			<div class="content-box-header">
+				<h3>课程表</h3>
+				<div class="clear"></div>
+			</div>
+			<div class="content-box-content">
+				<div class="tab-content default-tab" id="tab1"> 
+					<table>
+						<thead>
+							<tr>
+							   <th>编号</th>
+							   <th>时间</th>
+							   <th>星期一</th>
+							   <th>星期二</th>
+							   <th>星期三</th>
+							   <th>星期四</th>
+ 							   <th>星期五</th>
+							   <th>星期六</th>
+							   <th>星期日</th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php
+							foreach($list as $row){
+							?>
+							<tr id="tr<?php echo $row['id'];?>">
+								<td><?php echo $row['id'];?></td>
+								<td><?php echo $row['time'];?></td>
+								<td><?php echo $row['one'];?></td>
+								<td><?php echo $row['two'];?></td>
+								<td><?php echo $row['three'];?></td>
+								<td><?php echo $row['four'];?></td>
+								<td><?php echo $row['five'];?></td>
+								<td><?php echo $row['six'];?></td>
+								<td><?php echo $row['seven'];?></td>
+							</tr>
+							<?php
+							}
+							?>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<include file="./Admin/Public/html/foot.html" />
+	</div>
+
+	<div id="log" class="subjectTable">
+		<form method="post" action="{:U('Index/subjectTable')}">
+		<div class="log_t">
+			修改课程表
+			<a class="close">×</a>
+		</div>
+		<table class="table">
+			<tr>
+			   <th>编号</th>
+			   <th>时间</th>
+			   <th>星期一</th>
+			   <th>星期二</th>
+			   <th>星期三</th>
+			   <th>星期四</th>
+				   <th>星期五</th>
+			   <th>星期六</th>
+			   <th>星期日</th>
+			   <th>操作</th>
+			</tr>
+			<?php
+			foreach($list as $row){
+			?>
+			<tr id="tr<?php echo $row['id'];?>">
+				<td><input disabled="disabled" name="id<?php echo $row['id'];?>" type="text" size="5" value="<?php echo $row['id'];?>"></td>
+				<td><input name="time<?php echo $row['id'];?>" type="text" size="5" value="<?php echo $row['time'];?>"></td>
+				<td><input name="one<?php echo $row['id'];?>" type="text" size="5" value="<?php echo $row['one'];?>"></td>
+				<td><input name="two<?php echo $row['id'];?>" type="text" size="5" value="<?php echo $row['two'];?>"></td>
+				<td><input name="three<?php echo $row['id'];?>" type="text" size="5" value="<?php echo $row['three'];?>"></td>
+				<td><input name="four<?php echo $row['id'];?>" type="text" size="5" value="<?php echo $row['four'];?>"></td>
+				<td><input name="five<?php echo $row['id'];?>" type="text" size="5" value="<?php echo $row['five'];?>"></td>
+				<td><input name="six<?php echo $row['id'];?>" type="text" size="5" value="<?php echo $row['six'];?>"></td>
+				<td><input name="seven<?php echo $row['id'];?>" type="text" size="5" value="<?php echo $row['seven'];?>"></td>
+				<td>										
+					<a href="subjectTable?delete=<?php echo $row['id'];?>" title="Delete"><img src="__PUBLIC__/images/cross.png" alt="Delete" /></a> </td>
+			</tr>
+			<?php
+			}
+			?>
+			<tr class="lastTr">
+				<td colspan=5><button type="button" id="add">添   加</button></td>
+				<td colspan=10><button type="button" id="del">移除</button></td>
+			</tr>
+		</table>
+		<div class="sub">
+			<span>所有选项请认真填写</span><br />
+			<button name="sub" type="submit">提&nbsp;&nbsp;&nbsp;&nbsp;交</button>
+		</div>
+		</form>
+		<!-- <div class="log_t">
+			修改课程表
+			<a class="close">×</a>
+		</div>
+		<form method="post" action="1.php">
+			<div class="log_ipt">
+				<label>时 间:</label>
+				<input type="text" name="time" />
+			</div>
+			<div class="log_ipt">
+				<label>星期一:</label>
+				<input type="text" name="one" />
+			</div>
+			<div class="log_ipt">
+				<label>星期二:</label>
+				<input type="text" name="two" />
+			</div>
+			<div class="log_ipt">
+				<label>星期三:</label>
+				<input type="text" name="three" />
+			</div>
+			<div class="log_ipt">
+				<label>星期四:</label>
+				<input type="text" name="four" />
+			</div>
+			<div class="log_ipt">
+				<label>星期五:</label>
+				<input type="text" name="five" />
+			</div>
+			<div class="log_ipt">
+				<label>星期六:</label>
+				<input type="text" name="six" />
+			</div>
+			<div class="log_ipt">
+				<label>星期日:</label>
+				<input type="text" name="seven" />
+			</div>
+			<div class="sub">
+				<span>所有选项请认真填写</span><br />
+				<button name="sub" type="button">提&nbsp;&nbsp;&nbsp;&nbsp;交</button>
+			</div>
+		</form> -->
+	</div>
+</div>
+</body>
+<script>
+$(function(){
+function getRandom(n){
+    return Math.floor(Math.random()*n+1);
+}
+$("#add").click(function(){
+	var num = 'add'+getRandom(10000);
+	var html = "<tr class='"+ num +"'><td><input disabled='disabled' name='id"+ num +"' type='text'></td><td><input name='time"+ num +"' type='text'></td><td><input name='one"+ num +"' type='text'></td><td><input name='two"+ num +"' type='text'></td><td><input name='three"+ num +"' type='text'></td><td><input name='four"+ num +"' type='text'></td><td><input name='five"+ num +"' type='text'></td><td><input name='six"+ num +"' type='text'></td><td><input name='seven"+ num +"' type='text'></td><td></td></tr>";
+	var jb = $("#log table tr").eq(-1);
+	// alert(jb);
+	jb.before(html);
+});
+$("#del").click(function(){
+	var count1 = $("#tab1 table tr").size();
+	var count2 = $("#log table tr").size();
+	var count3 = count2-count1;
+	if(count3>1){
+		jv = $("#log table tr").eq(-2);
+		jv.remove();
+	}else{
+		alert("如果要删除原有数据，请点击操作栏删除按钮进行删除！");
+	}
+});
+});
+</script>
+</html>

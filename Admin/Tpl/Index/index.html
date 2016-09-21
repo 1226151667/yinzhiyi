@@ -1,0 +1,98 @@
+<!-- 引入导航栏html模板 -->
+<include file="./Admin/Public/html/nav.html" />
+<script>
+    $(function () {
+    var date = new Date();
+    var Y = date.getFullYear();
+    var m = date.getMonth()+1;
+    var mToc = ["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"];
+    var mNow = [];
+    var newUe = [];
+    var newTe = [];
+    for(var i=0;i<m;i++){
+        mNow[i] = mToc[i];
+    }
+    var newUeS = <?php echo $newUe;?>;
+    var newTeS = <?php echo $newTe;?>;
+    $(newUeS).each(function(i,v){
+        newUe[i] = v;
+    });
+    $(newTeS).each(function(i,v){
+        newTe[i] = v;
+    });
+    $('#container').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: Y+'年用户月增人数统计'
+        },
+        xAxis: {
+            categories:mNow
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '人数（个）'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} 个</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.0,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: '游客',
+            data: newTe
+
+        }, {
+            name: '会员',
+            data: newUe
+
+        }]
+    });
+});				
+  </script>
+	<div id="main-content" class="index">
+		<div id="indexTJ1">
+			<div>
+                在线游客<br />
+                <span><?php echo $oTeCnt;?></span>
+            </div>
+            <div>
+				今日新增游客<br />
+				<span><?php echo $tTCnt;?></span>
+			</div>
+			<div>
+				游客总数<br />
+				<span><?php echo $tmpuserCnt;?></span>
+			</div>
+            <div>
+                在线会员<br />
+                <span><?php echo $oUeCnt;?></span>
+            </div>
+			<div>
+				今日新增会员<br />
+				<span><?php echo $tUCnt;?></span>
+			</div>
+			<div>
+				会员总数<br />
+				<span><?php echo $userCnt;?></span>
+			</div>
+		</div>
+		<div class="indexClear"></div>
+		<div id="container" style="min-width:700px;height:400px"></div>
+		<include file="./Admin/Public/html/foot.html" />
+	</div>
+</div>
+</body>
+</html>

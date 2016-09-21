@@ -1,0 +1,110 @@
+*{
+	padding:0px;
+	margin:0px;
+}
+img{
+	border:0 none;
+}
+a{
+	text-decoration:none;
+}
+#log{
+	/*overflow:auto;*/
+	overflow-y:auto;
+	color:gray;
+	display:none;
+	height:600px;
+	width:1000px;
+	padding:0px 12px 12px 12px;
+	background:white;
+	border:1px solid #e0e0e0;
+	border-radius:8px;
+	position:absolute;
+	z-index:10000;
+	text-align: center;
+}
+#log form{
+	margin-top:20px;
+}
+#log .log_t{
+	display: block;
+	border-radius: 8px;
+	font-size:22px;
+	font-weight: bold;
+	height:50px;
+	line-height:50px;
+	width:100%;
+	background:#f0f0f0;
+}
+#log .log_t .close{
+	cursor:pointer;
+	float:right;
+	font-family:arial;
+	font-size:40px;
+	font-weight:700;
+	color:#999;
+	padding-right:10px;
+}
+#log .log_ipt{
+	padding-top:10px;
+	font-size:18px;
+	color:#9d9d9d;
+	clear: both;
+	width:80%;
+	margin:0 auto;
+}
+#log .log_ipt label{
+	float:left;
+	height:40px;
+	width:20%;
+	line-height:40px;
+}
+#log .log_ipt input,select{
+	/*float:left;*/
+	font-size:14px;
+	clear: left;
+	height:40px;
+	width:300px;
+	line-height:40px;
+	border-radius: 5px;
+	border:1px solid #e0e0e0;
+}
+#log .sub{
+	clear: both;
+	margin-top: 20px;
+	text-align:center;
+}
+#log .sub button:hover{
+	opacity:1;
+	filter:alpha(opacity=100);
+}
+#log .sub button{
+	margin-top: 20px;
+	cursor:pointer;
+	height:40px;
+	width:400px;
+	border-radius:5px;
+	background:#4490f7;
+	border:none;
+	color:white;
+	font-size:25px;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+}
+#log span{
+	font-size: 16px;
+	color:#adadad;
+}
+/*蒙雾罩*/
+#mask{
+	display:none;
+	position:fixed;
+	top:0px;
+	left:0px;
+	height:100%;
+	width:100%;
+	background:#848484;
+	opacity:0.5;
+	z-index:9999;
+	filter:alpha(opacity=50);
+}

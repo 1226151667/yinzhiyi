@@ -1,0 +1,95 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>富升财经</title>
+		<link rel="stylesheet" href="__PUBLIC__/css/reset.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="__PUBLIC__/css/style.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="__PUBLIC__/css/invalid.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="__PUBLIC__/css/log.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="__PUBLIC__/css/subjectTable.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="__PUBLIC__/css/ipBanTable.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="__PUBLIC__/css/index.css" type="text/css" media="screen" />
+		<link href="__PUBLIC__/images/yinzhiyi.ico" rel="shortcut icon" type="image/x-icon" />
+		<script type="text/javascript" src="__PUBLIC__/js/jquery-2.2.3.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/js/simpla.jquery.configuration.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/js/facebox.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/js/jquery.wysiwyg.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/js/jquery.datePicker.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/js/jquery.date.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/js/log.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/js/subjectTable.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/js/ipBanTable.js"></script>
+		<!-- 柱形图专用 -->
+  		<script type="text/javascript" src="__PUBLIC__/js/highcharts.js"></script>
+  		<script type="text/javascript" src="__PUBLIC__/js/exporting.js"></script>
+		<!--[if IE]><script type="text/javascript" src="__PUBLIC__/js/jquery.bgiframe.js"></script><![endif]-->
+		<!-- Internet Explorer .png-fix -->
+		
+		<!--[if IE 6]>
+			<script type="text/javascript" src="__PUBLIC__/js/DD_belatedPNG_0.0.7a.js"></script>
+			<script type="text/javascript">
+				DD_belatedPNG.fix('.png_bg, img, li');
+			</script>
+		<![endif]-->	
+	
+	</head>
+<body>
+<div id="body-wrapper">
+	<div id="sidebar">
+		<div id="sidebar-wrapper">
+			<h1 id="sidebar-title">
+				<a href="#">富升财经后台管理</a>
+			</h1>
+			<a href="{:U('Index/index')}">
+				<img id="logo" src="__PUBLIC__/images/logo.png" alt="Simpla Admin logo" />
+			</a>
+			<div id="profile-links">
+				欢迎回来, 
+				<a href="#" title="Edit your profile"><?php echo $uname;?></a><br /><br />
+				<a target="_blank" href="<?php echo __ROOT__.'/index.php';?>" title="View the Site">网站首页</a> | <a href="{:U('Index/logout')}" title="登出">登出</a>
+			</div>        
+			<ul id="main-nav">
+				<li>
+					<a href="{:U('Index/index')}" class="nav-top-item">
+						管理端
+					</a>
+					<ul>
+						<li><a href="{:U('Index/index')}">首页</a></li>
+						<li><a href="{:U('Index/baseinfo')}">网站基础设置</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="nav-top-item">
+						系统
+					</a>
+					<ul>
+						<li><a href="{:U('Index/column')}">栏目</a></li>
+						<li><a href="{:U('Index/announcement')}">公告</a></li>
+						<li><a href="{:U('Index/say')}">喊单</a></li>
+						<li><a href="{:U('Index/yy')}">YY直播</a></li>
+						<li><a href="{:U('Index/subjectTable')}">课程表</a></li>
+						<li><a href="{:U('Index/systemTable')}">系统消息</a></li>
+					</ul>       
+				</li>
+				<li> 
+					<a href="#" class="nav-top-item">
+						用户
+					</a>
+					<ul>
+						<li><a href="{:U('Index/user')}">全部会员</a></li>
+						<li><a href="{:U('Index/userType')}">会员分组</a></li>
+						<li><a href="{:U('Index/tmpuser')}">全部游客</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="nav-top-item">
+						管理员
+					</a>
+					<ul>
+						<li><a href="{:U('Index/empUser')}">全部管理员</a></li>
+						<li><a href="{:U('Index/empUserType')}">管理员分组</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>

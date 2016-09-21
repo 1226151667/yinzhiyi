@@ -1,0 +1,479 @@
+[ 2016-08-22T14:33:43+08:00 ] 0.0.0.0 /tp_video/index.php/Index/index.html?refresh=ok&chatMaxId=164
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002001s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `subject` [ RunTime:0.017001s ]
+SQL: SHOW COLUMNS FROM `announcement` [ RunTime:0.015001s ]
+SQL: SHOW COLUMNS FROM `tmpuser` [ RunTime:0.015001s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `loginrecord` [ RunTime:0.010000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `tmpuser` WHERE ( ip='::1' ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `type`,(case type when 0 then (select t.uname from tmpuser t where t0.userId=t.id) else (select u.uname from user u where t0.userId=u.id) end) as userName FROM loginrecord t0 WHERE ( t0.endTm>'2016-08-22 14:32:42' )  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: logout E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 146 行.
+SQL: SHOW COLUMNS FROM `chat` [ RunTime:0.013001s ]
+NOTIC: [8] Undefined index: content E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 219 行.
+NOTIC: [8] Undefined index: toUserId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 220 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT t0.*,u.nickName as userName,e.nickName as toUserName FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId ORDER BY t0.id  [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: userId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 236 行.
+SQL: UPDATE loginrecord t0,(select id from loginrecord where userId=6 and type=0 order by id desc limit 1) b SET `endTm`='2016-08-22 14:33:42' WHERE ( t0.id=b.id ) [ RunTime:0.003001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT u.nickname as userName,e.nickname as toUserName,t0.* FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId WHERE ( t0.id>164 ) ORDER BY t0.tm  [ RunTime:0.002000s ]
+
+[ 2016-08-22T14:33:43+08:00 ] 0.0.0.0 /tp_video/index.php/Index/index.html?refresh=ok&chatMaxId=164
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `subject` [ RunTime:0.012001s ]
+SQL: SHOW COLUMNS FROM `announcement` [ RunTime:0.009001s ]
+SQL: SHOW COLUMNS FROM `tmpuser` [ RunTime:0.011000s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.013001s ]
+SQL: SHOW COLUMNS FROM `loginrecord` [ RunTime:0.016001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `tmpuser` WHERE ( ip='::1' ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `type`,(case type when 0 then (select t.uname from tmpuser t where t0.userId=t.id) else (select u.uname from user u where t0.userId=u.id) end) as userName FROM loginrecord t0 WHERE ( t0.endTm>'2016-08-22 14:32:43' )  [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: logout E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 146 行.
+SQL: SHOW COLUMNS FROM `chat` [ RunTime:0.013001s ]
+NOTIC: [8] Undefined index: content E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 219 行.
+NOTIC: [8] Undefined index: toUserId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 220 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT t0.*,u.nickName as userName,e.nickName as toUserName FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId ORDER BY t0.id  [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: userId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 236 行.
+SQL: UPDATE loginrecord t0,(select id from loginrecord where userId=6 and type=0 order by id desc limit 1) b SET `endTm`='2016-08-22 14:33:43' WHERE ( t0.id=b.id ) [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT u.nickname as userName,e.nickname as toUserName,t0.* FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId WHERE ( t0.id>164 ) ORDER BY t0.tm  [ RunTime:0.000000s ]
+
+[ 2016-08-22T14:33:45+08:00 ] 0.0.0.0 /tp_video/index.php/Index/index.html?refresh=ok&chatMaxId=164
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.005000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `subject` [ RunTime:0.029001s ]
+SQL: SHOW COLUMNS FROM `announcement` [ RunTime:0.028001s ]
+SQL: SHOW COLUMNS FROM `tmpuser` [ RunTime:0.027002s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.031002s ]
+SQL: SHOW COLUMNS FROM `loginrecord` [ RunTime:0.018001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `tmpuser` WHERE ( ip='::1' ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `type`,(case type when 0 then (select t.uname from tmpuser t where t0.userId=t.id) else (select u.uname from user u where t0.userId=u.id) end) as userName FROM loginrecord t0 WHERE ( t0.endTm>'2016-08-22 14:32:44' )  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: logout E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 146 行.
+SQL: SHOW COLUMNS FROM `chat` [ RunTime:0.016001s ]
+NOTIC: [8] Undefined index: content E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 219 行.
+NOTIC: [8] Undefined index: toUserId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 220 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT t0.*,u.nickName as userName,e.nickName as toUserName FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId ORDER BY t0.id  [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: userId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 236 行.
+SQL: UPDATE loginrecord t0,(select id from loginrecord where userId=6 and type=0 order by id desc limit 1) b SET `endTm`='2016-08-22 14:33:45' WHERE ( t0.id=b.id ) [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT u.nickname as userName,e.nickname as toUserName,t0.* FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId WHERE ( t0.id>164 ) ORDER BY t0.tm  [ RunTime:0.001000s ]
+
+[ 2016-08-22T14:33:45+08:00 ] 0.0.0.0 /tp_video/index.php/Index/index.html?refresh=ok&chatMaxId=164
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `subject` [ RunTime:0.011001s ]
+SQL: SHOW COLUMNS FROM `announcement` [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `tmpuser` [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.011001s ]
+SQL: SHOW COLUMNS FROM `loginrecord` [ RunTime:0.015001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `tmpuser` WHERE ( ip='::1' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `type`,(case type when 0 then (select t.uname from tmpuser t where t0.userId=t.id) else (select u.uname from user u where t0.userId=u.id) end) as userName FROM loginrecord t0 WHERE ( t0.endTm>'2016-08-22 14:32:45' )  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: logout E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 146 行.
+SQL: SHOW COLUMNS FROM `chat` [ RunTime:0.010000s ]
+NOTIC: [8] Undefined index: content E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 219 行.
+NOTIC: [8] Undefined index: toUserId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 220 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT t0.*,u.nickName as userName,e.nickName as toUserName FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId ORDER BY t0.id  [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: userId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 236 行.
+SQL: UPDATE loginrecord t0,(select id from loginrecord where userId=6 and type=0 order by id desc limit 1) b SET `endTm`='2016-08-22 14:33:45' WHERE ( t0.id=b.id ) [ RunTime:0.000000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT u.nickname as userName,e.nickname as toUserName,t0.* FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId WHERE ( t0.id>164 ) ORDER BY t0.tm  [ RunTime:0.001000s ]
+
+[ 2016-08-22T14:33:46+08:00 ] 0.0.0.0 /tp_video/index.php/Index/index.html?refresh=ok&chatMaxId=164
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004001s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `subject` [ RunTime:0.029002s ]
+SQL: SHOW COLUMNS FROM `announcement` [ RunTime:0.027002s ]
+SQL: SHOW COLUMNS FROM `tmpuser` [ RunTime:0.033002s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.016001s ]
+SQL: SHOW COLUMNS FROM `loginrecord` [ RunTime:0.015001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `tmpuser` WHERE ( ip='::1' ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `type`,(case type when 0 then (select t.uname from tmpuser t where t0.userId=t.id) else (select u.uname from user u where t0.userId=u.id) end) as userName FROM loginrecord t0 WHERE ( t0.endTm>'2016-08-22 14:32:46' )  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: logout E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 146 行.
+SQL: SHOW COLUMNS FROM `chat` [ RunTime:0.016001s ]
+NOTIC: [8] Undefined index: content E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 219 行.
+NOTIC: [8] Undefined index: toUserId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 220 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT t0.*,u.nickName as userName,e.nickName as toUserName FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId ORDER BY t0.id  [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: userId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 236 行.
+SQL: UPDATE loginrecord t0,(select id from loginrecord where userId=6 and type=0 order by id desc limit 1) b SET `endTm`='2016-08-22 14:33:46' WHERE ( t0.id=b.id ) [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT u.nickname as userName,e.nickname as toUserName,t0.* FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId WHERE ( t0.id>164 ) ORDER BY t0.tm  [ RunTime:0.001000s ]
+
+[ 2016-08-22T14:33:47+08:00 ] 0.0.0.0 /tp_video/index.php/Index/index.html?refresh=ok&chatMaxId=164
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `subject` [ RunTime:0.009001s ]
+SQL: SHOW COLUMNS FROM `announcement` [ RunTime:0.012001s ]
+SQL: SHOW COLUMNS FROM `tmpuser` [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.010001s ]
+SQL: SHOW COLUMNS FROM `loginrecord` [ RunTime:0.010000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `tmpuser` WHERE ( ip='::1' ) LIMIT 1   [ RunTime:0.001001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `type`,(case type when 0 then (select t.uname from tmpuser t where t0.userId=t.id) else (select u.uname from user u where t0.userId=u.id) end) as userName FROM loginrecord t0 WHERE ( t0.endTm>'2016-08-22 14:32:47' )  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: logout E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 146 行.
+SQL: SHOW COLUMNS FROM `chat` [ RunTime:0.011000s ]
+NOTIC: [8] Undefined index: content E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 219 行.
+NOTIC: [8] Undefined index: toUserId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 220 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT t0.*,u.nickName as userName,e.nickName as toUserName FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId ORDER BY t0.id  [ RunTime:0.002001s ]
+NOTIC: [8] Undefined index: userId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 236 行.
+SQL: UPDATE loginrecord t0,(select id from loginrecord where userId=6 and type=0 order by id desc limit 1) b SET `endTm`='2016-08-22 14:33:47' WHERE ( t0.id=b.id ) [ RunTime:0.005000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT u.nickname as userName,e.nickname as toUserName,t0.* FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId WHERE ( t0.id>164 ) ORDER BY t0.tm  [ RunTime:0.001000s ]
+
+[ 2016-08-22T14:33:48+08:00 ] 0.0.0.0 /tp_video/index.php/Index/index.html?refresh=ok&chatMaxId=164
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `subject` [ RunTime:0.023001s ]
+SQL: SHOW COLUMNS FROM `announcement` [ RunTime:0.021001s ]
+SQL: SHOW COLUMNS FROM `tmpuser` [ RunTime:0.023002s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.023001s ]
+SQL: SHOW COLUMNS FROM `loginrecord` [ RunTime:0.017001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `tmpuser` WHERE ( ip='::1' ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `type`,(case type when 0 then (select t.uname from tmpuser t where t0.userId=t.id) else (select u.uname from user u where t0.userId=u.id) end) as userName FROM loginrecord t0 WHERE ( t0.endTm>'2016-08-22 14:32:48' )  [ RunTime:0.002001s ]
+NOTIC: [8] Undefined index: logout E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 146 行.
+SQL: SHOW COLUMNS FROM `chat` [ RunTime:0.013000s ]
+NOTIC: [8] Undefined index: content E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 219 行.
+NOTIC: [8] Undefined index: toUserId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 220 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT t0.*,u.nickName as userName,e.nickName as toUserName FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId ORDER BY t0.id  [ RunTime:0.003001s ]
+NOTIC: [8] Undefined index: userId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 236 行.
+SQL: UPDATE loginrecord t0,(select id from loginrecord where userId=6 and type=0 order by id desc limit 1) b SET `endTm`='2016-08-22 14:33:48' WHERE ( t0.id=b.id ) [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT u.nickname as userName,e.nickname as toUserName,t0.* FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId WHERE ( t0.id>164 ) ORDER BY t0.tm  [ RunTime:0.001000s ]
+
+[ 2016-08-22T14:33:49+08:00 ] 0.0.0.0 /tp_video/index.php/Index/index.html?refresh=ok&chatMaxId=164
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `subject` [ RunTime:0.016001s ]
+SQL: SHOW COLUMNS FROM `announcement` [ RunTime:0.017001s ]
+SQL: SHOW COLUMNS FROM `tmpuser` [ RunTime:0.017001s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.017001s ]
+SQL: SHOW COLUMNS FROM `loginrecord` [ RunTime:0.017001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `tmpuser` WHERE ( ip='::1' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `type`,(case type when 0 then (select t.uname from tmpuser t where t0.userId=t.id) else (select u.uname from user u where t0.userId=u.id) end) as userName FROM loginrecord t0 WHERE ( t0.endTm>'2016-08-22 14:32:49' )  [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: logout E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 146 行.
+SQL: SHOW COLUMNS FROM `chat` [ RunTime:0.016001s ]
+NOTIC: [8] Undefined index: content E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 219 行.
+NOTIC: [8] Undefined index: toUserId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 220 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT t0.*,u.nickName as userName,e.nickName as toUserName FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId ORDER BY t0.id  [ RunTime:0.003001s ]
+NOTIC: [8] Undefined index: userId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 236 行.
+SQL: UPDATE loginrecord t0,(select id from loginrecord where userId=6 and type=0 order by id desc limit 1) b SET `endTm`='2016-08-22 14:33:49' WHERE ( t0.id=b.id ) [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT u.nickname as userName,e.nickname as toUserName,t0.* FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId WHERE ( t0.id>164 ) ORDER BY t0.tm  [ RunTime:0.001000s ]
+
+[ 2016-08-22T14:33:50+08:00 ] 0.0.0.0 /tp_video/index.php/Index/index.html?refresh=ok&chatMaxId=164
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `subject` [ RunTime:0.016001s ]
+SQL: SHOW COLUMNS FROM `announcement` [ RunTime:0.016001s ]
+SQL: SHOW COLUMNS FROM `tmpuser` [ RunTime:0.015001s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.015001s ]
+SQL: SHOW COLUMNS FROM `loginrecord` [ RunTime:0.014001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `tmpuser` WHERE ( ip='::1' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `type`,(case type when 0 then (select t.uname from tmpuser t where t0.userId=t.id) else (select u.uname from user u where t0.userId=u.id) end) as userName FROM loginrecord t0 WHERE ( t0.endTm>'2016-08-22 14:32:50' )  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: logout E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 146 行.
+SQL: SHOW COLUMNS FROM `chat` [ RunTime:0.016001s ]
+NOTIC: [8] Undefined index: content E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 219 行.
+NOTIC: [8] Undefined index: toUserId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 220 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT t0.*,u.nickName as userName,e.nickName as toUserName FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId ORDER BY t0.id  [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: userId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 236 行.
+SQL: UPDATE loginrecord t0,(select id from loginrecord where userId=6 and type=0 order by id desc limit 1) b SET `endTm`='2016-08-22 14:33:50' WHERE ( t0.id=b.id ) [ RunTime:0.004000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT u.nickname as userName,e.nickname as toUserName,t0.* FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId WHERE ( t0.id>164 ) ORDER BY t0.tm  [ RunTime:0.001000s ]
+
+[ 2016-08-22T14:33:51+08:00 ] 0.0.0.0 /tp_video/index.php/Index/index.html?refresh=ok&chatMaxId=164
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `subject` [ RunTime:0.016001s ]
+SQL: SHOW COLUMNS FROM `announcement` [ RunTime:0.021001s ]
+SQL: SHOW COLUMNS FROM `tmpuser` [ RunTime:0.016001s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.015001s ]
+SQL: SHOW COLUMNS FROM `loginrecord` [ RunTime:0.017001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `tmpuser` WHERE ( ip='::1' ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `type`,(case type when 0 then (select t.uname from tmpuser t where t0.userId=t.id) else (select u.uname from user u where t0.userId=u.id) end) as userName FROM loginrecord t0 WHERE ( t0.endTm>'2016-08-22 14:32:51' )  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: logout E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 146 行.
+SQL: SHOW COLUMNS FROM `chat` [ RunTime:0.017001s ]
+NOTIC: [8] Undefined index: content E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 219 行.
+NOTIC: [8] Undefined index: toUserId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 220 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT t0.*,u.nickName as userName,e.nickName as toUserName FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId ORDER BY t0.id  [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: userId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 236 行.
+SQL: UPDATE loginrecord t0,(select id from loginrecord where userId=6 and type=0 order by id desc limit 1) b SET `endTm`='2016-08-22 14:33:51' WHERE ( t0.id=b.id ) [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT u.nickname as userName,e.nickname as toUserName,t0.* FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId WHERE ( t0.id>164 ) ORDER BY t0.tm  [ RunTime:0.001001s ]
+
+[ 2016-08-22T14:33:52+08:00 ] 0.0.0.0 /tp_video/index.php/Index/index.html?refresh=ok&chatMaxId=164
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002001s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `subject` [ RunTime:0.018001s ]
+SQL: SHOW COLUMNS FROM `announcement` [ RunTime:0.016001s ]
+SQL: SHOW COLUMNS FROM `tmpuser` [ RunTime:0.015000s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.016000s ]
+SQL: SHOW COLUMNS FROM `loginrecord` [ RunTime:0.016000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `tmpuser` WHERE ( ip='::1' ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `type`,(case type when 0 then (select t.uname from tmpuser t where t0.userId=t.id) else (select u.uname from user u where t0.userId=u.id) end) as userName FROM loginrecord t0 WHERE ( t0.endTm>'2016-08-22 14:32:52' )  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: logout E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 146 行.
+SQL: SHOW COLUMNS FROM `chat` [ RunTime:0.024001s ]
+NOTIC: [8] Undefined index: content E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 219 行.
+NOTIC: [8] Undefined index: toUserId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 220 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT t0.*,u.nickName as userName,e.nickName as toUserName FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId ORDER BY t0.id  [ RunTime:0.006001s ]
+NOTIC: [8] Undefined index: userId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 236 行.
+SQL: UPDATE loginrecord t0,(select id from loginrecord where userId=6 and type=0 order by id desc limit 1) b SET `endTm`='2016-08-22 14:33:52' WHERE ( t0.id=b.id ) [ RunTime:0.024001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT u.nickname as userName,e.nickname as toUserName,t0.* FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId WHERE ( t0.id>164 ) ORDER BY t0.tm  [ RunTime:0.001001s ]
+
+[ 2016-08-22T14:33:53+08:00 ] 0.0.0.0 /tp_video/index.php/Index/index.html?refresh=ok&chatMaxId=164
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.006000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `subject` [ RunTime:0.017001s ]
+SQL: SHOW COLUMNS FROM `announcement` [ RunTime:0.015001s ]
+SQL: SHOW COLUMNS FROM `tmpuser` [ RunTime:0.018001s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.017001s ]
+SQL: SHOW COLUMNS FROM `loginrecord` [ RunTime:0.020002s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `tmpuser` WHERE ( ip='::1' ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `type`,(case type when 0 then (select t.uname from tmpuser t where t0.userId=t.id) else (select u.uname from user u where t0.userId=u.id) end) as userName FROM loginrecord t0 WHERE ( t0.endTm>'2016-08-22 14:32:53' )  [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: logout E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 146 行.
+SQL: SHOW COLUMNS FROM `chat` [ RunTime:0.019001s ]
+NOTIC: [8] Undefined index: content E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 219 行.
+NOTIC: [8] Undefined index: toUserId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 220 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT t0.*,u.nickName as userName,e.nickName as toUserName FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId ORDER BY t0.id  [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: userId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 236 行.
+SQL: UPDATE loginrecord t0,(select id from loginrecord where userId=6 and type=0 order by id desc limit 1) b SET `endTm`='2016-08-22 14:33:53' WHERE ( t0.id=b.id ) [ RunTime:0.007000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT u.nickname as userName,e.nickname as toUserName,t0.* FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId WHERE ( t0.id>164 ) ORDER BY t0.tm  [ RunTime:0.001000s ]
+
+[ 2016-08-22T14:33:54+08:00 ] 0.0.0.0 /tp_video/index.php/Index/index.html?refresh=ok&chatMaxId=164
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.006000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.006000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `subject` [ RunTime:0.027002s ]
+SQL: SHOW COLUMNS FROM `announcement` [ RunTime:0.031002s ]
+SQL: SHOW COLUMNS FROM `tmpuser` [ RunTime:0.017001s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.019001s ]
+SQL: SHOW COLUMNS FROM `loginrecord` [ RunTime:0.016001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `tmpuser` WHERE ( ip='::1' ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `type`,(case type when 0 then (select t.uname from tmpuser t where t0.userId=t.id) else (select u.uname from user u where t0.userId=u.id) end) as userName FROM loginrecord t0 WHERE ( t0.endTm>'2016-08-22 14:32:54' )  [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: logout E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 146 行.
+SQL: SHOW COLUMNS FROM `chat` [ RunTime:0.017001s ]
+NOTIC: [8] Undefined index: content E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 219 行.
+NOTIC: [8] Undefined index: toUserId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 220 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT t0.*,u.nickName as userName,e.nickName as toUserName FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId ORDER BY t0.id  [ RunTime:0.003001s ]
+NOTIC: [8] Undefined index: userId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 236 行.
+SQL: UPDATE loginrecord t0,(select id from loginrecord where userId=6 and type=0 order by id desc limit 1) b SET `endTm`='2016-08-22 14:33:54' WHERE ( t0.id=b.id ) [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT u.nickname as userName,e.nickname as toUserName,t0.* FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId WHERE ( t0.id>164 ) ORDER BY t0.tm  [ RunTime:0.001000s ]
+
+[ 2016-08-22T14:33:55+08:00 ] 0.0.0.0 /tp_video/index.php/Index/index.html?refresh=ok&chatMaxId=164
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `subject` [ RunTime:0.016001s ]
+SQL: SHOW COLUMNS FROM `announcement` [ RunTime:0.018001s ]
+SQL: SHOW COLUMNS FROM `tmpuser` [ RunTime:0.017001s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.018001s ]
+SQL: SHOW COLUMNS FROM `loginrecord` [ RunTime:0.020001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `tmpuser` WHERE ( ip='::1' ) LIMIT 1   [ RunTime:0.001001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `type`,(case type when 0 then (select t.uname from tmpuser t where t0.userId=t.id) else (select u.uname from user u where t0.userId=u.id) end) as userName FROM loginrecord t0 WHERE ( t0.endTm>'2016-08-22 14:32:55' )  [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: logout E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 146 行.
+SQL: SHOW COLUMNS FROM `chat` [ RunTime:0.017001s ]
+NOTIC: [8] Undefined index: content E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 219 行.
+NOTIC: [8] Undefined index: toUserId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 220 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT t0.*,u.nickName as userName,e.nickName as toUserName FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId ORDER BY t0.id  [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: userId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 236 行.
+SQL: UPDATE loginrecord t0,(select id from loginrecord where userId=6 and type=0 order by id desc limit 1) b SET `endTm`='2016-08-22 14:33:55' WHERE ( t0.id=b.id ) [ RunTime:0.003001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT u.nickname as userName,e.nickname as toUserName,t0.* FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId WHERE ( t0.id>164 ) ORDER BY t0.tm  [ RunTime:0.001000s ]
+
+[ 2016-08-22T14:33:56+08:00 ] 0.0.0.0 /tp_video/index.php/Index/index.html?refresh=ok&chatMaxId=164
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `subject` [ RunTime:0.015000s ]
+SQL: SHOW COLUMNS FROM `announcement` [ RunTime:0.014000s ]
+SQL: SHOW COLUMNS FROM `tmpuser` [ RunTime:0.015001s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.018001s ]
+SQL: SHOW COLUMNS FROM `loginrecord` [ RunTime:0.015001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `tmpuser` WHERE ( ip='::1' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `type`,(case type when 0 then (select t.uname from tmpuser t where t0.userId=t.id) else (select u.uname from user u where t0.userId=u.id) end) as userName FROM loginrecord t0 WHERE ( t0.endTm>'2016-08-22 14:32:56' )  [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: logout E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 146 行.
+SQL: SHOW COLUMNS FROM `chat` [ RunTime:0.015001s ]
+NOTIC: [8] Undefined index: content E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 219 行.
+NOTIC: [8] Undefined index: toUserId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 220 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT t0.*,u.nickName as userName,e.nickName as toUserName FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId ORDER BY t0.id  [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: userId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 236 行.
+SQL: UPDATE loginrecord t0,(select id from loginrecord where userId=6 and type=0 order by id desc limit 1) b SET `endTm`='2016-08-22 14:33:56' WHERE ( t0.id=b.id ) [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT u.nickname as userName,e.nickname as toUserName,t0.* FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId WHERE ( t0.id>164 ) ORDER BY t0.tm  [ RunTime:0.001000s ]
+
+[ 2016-08-22T14:33:57+08:00 ] 0.0.0.0 /tp_video/index.php/Index/index.html?refresh=ok&chatMaxId=164
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.003000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `subject` [ RunTime:0.014001s ]
+SQL: SHOW COLUMNS FROM `announcement` [ RunTime:0.018001s ]
+SQL: SHOW COLUMNS FROM `tmpuser` [ RunTime:0.018001s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `loginrecord` [ RunTime:0.011001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `tmpuser` WHERE ( ip='::1' ) LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT `type`,(case type when 0 then (select t.uname from tmpuser t where t0.userId=t.id) else (select u.uname from user u where t0.userId=u.id) end) as userName FROM loginrecord t0 WHERE ( t0.endTm>'2016-08-22 14:32:57' )  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: logout E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 146 行.
+SQL: SHOW COLUMNS FROM `chat` [ RunTime:0.012001s ]
+NOTIC: [8] Undefined index: content E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 219 行.
+NOTIC: [8] Undefined index: toUserId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 220 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT t0.*,u.nickName as userName,e.nickName as toUserName FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId ORDER BY t0.id  [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: userId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 236 行.
+SQL: UPDATE loginrecord t0,(select id from loginrecord where userId=6 and type=0 order by id desc limit 1) b SET `endTm`='2016-08-22 14:33:57' WHERE ( t0.id=b.id ) [ RunTime:0.023002s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT u.nickname as userName,e.nickname as toUserName,t0.* FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId WHERE ( t0.id>164 ) ORDER BY t0.tm  [ RunTime:0.000000s ]
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Id,t0.toUserId FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId ORDER BY t0.tm  [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT u.nickname as userName,e.nickname as toUserName,t0.content,t0.tm,t0.userId,t0.toUserId FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId ORDER BY t0.tm  [ RunTime:0.002000s ]
+
+[ 2016-08-13T15:35:47+08:00 ] 127.0.0.1 /tp_video/index.php/Index/index?refresh=ok
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `subject` [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `announcement` [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `tmpuser` [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `loginrecord` [ RunTime:0.005001s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT * FROM `tmpuser` WHERE ( ip='127.0.0.1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `chat` [ RunTime:0.005000s ]
+NOTIC: [8] Undefined index: content E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 151 行.
+NOTIC: [8] Undefined index: toUserId E:\wamp\www\tp_video\Home\Lib\Action\IndexAction.class.php 第 152 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT u.nickName as userName,e.nickName as toUserName,t0.content,t0.tm,t0.userId,t0.toUserId FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId ORDER BY t0.tm  [ RunTime:0.002000s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead E:\wamp\www\tp_video\ThinkPHP\Lib\Core\Db.class.php 第 605 行.
+SQL: SELECT u.nickname as userName,e.nickname as toUserName,t0.content,t0.tm,t0.userId,t0.toUserId FROM chat t0 LEFT JOIN User u on u.id=t0.userId LEFT JOIN User e on e.id=t0.toUserId ORDER BY t0.tm  [ RunTime:0.002000s ]
+
+[ 2016-08-13T15:35:47+08:00 ] 0.0.0.0 /tp_video/index.php/Index/index?refresh=ok
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002

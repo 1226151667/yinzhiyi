@@ -1,0 +1,161 @@
+<include file="./Admin/Public/html/nav.html" />	
+	<div id="main-content"> <!-- Main Content Section with everything -->
+		<h2>欢迎管理员 <?php echo $uname;?></h2>
+		<p id="page-intro">会员分组</p>
+		<div class="clear"></div>
+		<div class="content-box">
+			<div class="content-box-header">
+				<h3>会员分组</h3>
+				<div class="clear"></div>
+			</div>
+			<div class="content-box-content">
+				<div class="tab-content default-tab" id="tab1">
+					<div id="operate">
+					   <input type="text" name="likeName" />
+					   <button class="search">搜&nbsp;&nbsp;&nbsp;索</button>
+					   <button class="all">显示全部</button>
+					   <button class="delete">删除选中项</button>
+					   <button id="edit">添加</button>
+					</div>
+					<hr />
+					<table>
+						<thead>
+							<tr>
+							   <th>编号</th>
+							   <th>选择</th> 
+							   <th>名称</th>
+							   <th>备注</th>
+							   <th>头像</th>
+							   <th>观看视频时间（min）</th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php
+								foreach($list as $row){
+							?>
+							<tr class="db">
+								<td><?php echo $row['id'];?></td>
+								<td><input type="checkbox" name="<?php echo $row['id'];?>" /></td>
+								<td><?php echo $row['name'];?></td>
+								<td><?php echo $row['note'];?></td>
+								<td><img style="height:40px" src="<?php echo $row['aFilePath'];?>"></td>
+								<td><?php echo $row['allowTm'];?></td>
+							</tr>
+							<?php
+							}
+							?>
+						</tbody>
+					</table>
+					<?php echo '<br />'.$page;?>
+				</div>
+			</div>
+		</div>
+		<include file="./Admin/Public/html/foot.html" />
+	</div>
+
+	<div id="log" class="subjectTable">
+		<div class="log_t">
+			<span>添加页</span>
+			<a class="close">×</a>
+		</div>
+		<form method="post" enctype="multipart/form-data" action="{:U('Index/userType')}">
+			<div class="log_ipt" style="display:none;">
+				<label>id:</label>
+				<input type="text"  name="id" />
+			</div>
+			<div class="log_ipt">
+				<label>名称:</label>
+				<input type="text" name="name" />*
+			</div>
+			<div class="log_ipt">
+				<label>头像:</label>
+				<a class="file">上传图片
+                    <input type="file" name="tp" />
+                </a>
+			</div>
+			<div class="log_ipt">
+				<label>备注:</label>
+				<input type="text" name="note" />*
+			</div>
+			<div class="log_ipt">
+				<label>观看视频时间（min）:</label>
+				<input type="text" name="allowTm" />*
+			</div>
+			<div class="sub">
+				<span>所有选项请认真填写</span><br />
+				<button name="sub" type="button">提&nbsp;&nbsp;&nbsp;&nbsp;交</button>
+			</div>
+		</form>
+	</div>
+</div>
+</body>
+<script>
+$(function(){
+	//模糊搜索
+	$("button[class='search']").click(function(){
+		var likeName = $("input[name='likeName']").val();
+		if(likeName==""){
+			alert("请输入搜索内容");
+		}else{
+			window.location.href="userType/name/"+ likeName;
+		}
+	});
+	//删除
+	$("button[class='delete']").click(function(){
+		var checkbox = $("input[type='checkbox']");
+		var del = "";
+		$.each(checkbox,function(i,v){
+			var rs = $(v).is(":checked");
+			if(rs){
+				var id = $(v).attr("name");
+				del += id+",";	
+			}
+		});
+		if(del == ""){
+			alert("没有选择的项");
+		}else{
+			window.location.href="userType/del/"+ del;
+		}
+	});
+	//查看全部
+	$("button[class='all']").click(function(){
+		window.location.href="{:U('Index/userType')}";
+	});
+	//添加or修改
+	$("button[name='sub']").click(function(){
+		var name = $("input[name='name']").val().trim();
+		var note = $("input[name='note']").val().trim();
+		var allowTm = $("input[name='allowTm']").val().trim();
+		if(name=="" || note=="" ||　allowTm==""){
+			alert("所有带*号项都必填");
+		}else{
+			$("form").submit();
+		}
+	});
+	var edit = $(".db");
+	edit.dblclick(function(){
+		var id = $(this).find("input[type='checkbox']").attr("name");
+		$.get(
+			'{:U("Index/userType")}',
+			{id:id},
+			function(data){
+				$(".log_t span").text("修改页");
+				$("input[name='name']").val(data.name);
+				$("input[name='note']").val(data.note);
+				$("input[name='allowTm']").val(data.allowTm);
+				$("input[name='id']").val(data.id);
+			},
+			"json"
+		);
+		$(".log_t").css({
+			"display":"block",
+			"opacity":"1",
+			"filter":"alpha(opacity=100)",
+		});
+		$("body").append("<div id='mask'></div>");  
+		$("#mask").addClass("mask").fadeIn("slow"); //使用雾罩把屏幕罩住
+		$('#log').fadeIn("slow");
+	});
+});
+</script>
+</html>
