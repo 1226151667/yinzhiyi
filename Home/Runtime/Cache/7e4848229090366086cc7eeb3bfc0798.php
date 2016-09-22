@@ -207,8 +207,8 @@ a{filter:alpha(opacity=100); -moz-opacity:1; opacity:1;}
                 </div>  
                 <div class="thumbnail_2">
                     <div class="caption_2">
-                        
-                        <gs:video-live allowfullscreen="true" width="100%" height="420px"  id="videoComponent" site="jzyzbs.gensee.com"ctx="webcast" ownerid="d7e73f4524c245999bc80cf679f41e05" />  
+                        <embed align="middle" allowfullscreen="true" width="100%" height="500px" allowscriptaccess="always" mode="transparent" quality="high" src="http://yy.com/s/23614648/23614648/yyscene.swf" type="application/x-shockwave-flash"></embed>
+                      <!--   <gs:video-live allowfullscreen="true" width="100%" height="420px"  id="videoComponent" site="jzyzbs.gensee.com"ctx="webcast" ownerid="d7e73f4524c245999bc80cf679f41e05" /> -->  
                     </div>
                 </div>
                 <div id="gongg">
