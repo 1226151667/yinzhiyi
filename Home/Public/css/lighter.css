@@ -3,7 +3,7 @@
 .jumbotron{background:#f0f0f0; color:#333; padding:4.5em 0 3.5em; text-align:center; margin-bottom:0;}
 .jumbotron2{background:#f0f0f0; color:#333; padding:3.6em 0 0em; text-align:center; margin-bottom:0;}
 .jumbotron3{background:#f0f0f0; color:#333; padding:6.6em 0 0em; text-align:center; margin-bottom:0;}
-.jumbotron1{background:#; color:#333; padding:0.5em 0 0.5em; text-align:center; margin-bottom:0;}
+.jumbotron1{color:#333; padding:0.5em 0 0.5em; text-align:center; margin-bottom:0;}
 .jumbotron1 h1{font-family:georgia, serif; font-size:2.5em;}
 .jumbotron1 h2{font-size:1.2em; font-style:italic; font-weight:normal; line-height:1.4em; margin-bottom:1.4em;}
 .jumbotron1 .btn{font-size:1.2em; padding:0.3em 2.5em 0.5em;}
@@ -34,23 +34,24 @@ table thead th{float:left; background:#978772;}
 #thumbnail_1 dt ul li a.hover,#thumbnail_1 dt ul li a:hover{background:#7e6e5a;}
 .groupIcon{padding-left:100px;}
 #thumbnail_1 dd{background:#dfcdb6;padding-top:10px; padding-bottom:10px; top:0;}
+#tb_1{margin-bottom:110px;}
 #tb_1 tr td a{display:block; margin-top:3%; height:104px; width:119px;}
 #tb_1 tr td a:hover{background:rgba(0, 0, 0, 0.5); height:104px; width:119px;}
 
 /*yy*/
-#yyTop{margin-bottom:10px;height:25px;line-height:25px;font-size:14px;}
+#yyTop{margin-bottom:10px;height:35px;line-height:35px;font-size:13px;background:rgba(0,0,0,0.3);padding-left:15px;}
 #yyTop ul li{float:left;}
-#yyTop .yyRefresh{background:black;color:white;width:50px;margin-left:20px;}
-#yyTop select{height:25px;width:80px;font-size:14px;}
+#yyTop .yyRefresh{color:white;width:50px;margin-left:20px;}
+#yyTop select{height:25px;width:80px;font-size:13px;}
 
-/***游客蓝***/
+/***游客栏***/
 #tab_wz{width:254px; text-align:center; background:#998974;}
-#tab_wz li{float:left; width:;}
+#tab_wz li{float:left;}
 #tab_wz li a.hover{background:#7f7260;}
 #tab_wz li a{padding-left:20px; display:inline-block; line-height:25px; width:125px; height:50px;
 text-align:center;}
 #tab_img li{display:none;}
-#tab_img{background:#dfcdb6; height:480px; width:254px; top:0;}
+#tab_img{background:#dfcdb6; height:400px; width:254px; top:0;overflow:auto;}
 #tab{margin-top:15px;}
 #tab_img li a #tab_img_1{display:block;width:254px; padding:10px 10px 10px 10px; color:#333;}
 #tab_img li a #tab_img_1:hover{ background:#e5d7c5; }
@@ -67,13 +68,13 @@ text-align:center;}
 #gongg_wz li a.hover{background:#7f7260;}
 #gongg_wz{display:block; width:100%; background:#998974;}
 #gongg_img li{display:none;}
-#gongg_img{height:30%;}
+#gongg_img{height:310px;overflow:scroll;}
 /****聊天栏****/
 .name{background:#ccb28f; width:100%; line-height:30px; text-align:left; padding-left:10px; font-size:14px;}
-#back{font-size:13px;color:black;background:rgba(255, 255, 255, 0.5); width:100%; height:550px;overflow:auto;text-align: left;padding:5px;}
-#back .tm{background:#3f98fd;color:white;padding:5px;}
-#back img{}
-#back .userId{color:red;cursor: pointer;}
+#back{font-size:13px;color:black;background:rgba(255, 255, 255, 0.5); width:100%; height:680px;overflow:auto;text-align: left;padding:5px;}
+#back .tm{color:white;padding:5px;font-size:12px;}
+#back .userId{color:white;cursor: pointer;background:#3f98fd;height:30px;line-height:25px;display:inline-block;border-radius:5px;padding:3px;}
+#back .dui{color:white;font-weight:bold;font-size:16px;background:#f59500;display:inline-block;height:30px;width:30px;line-height:30px;text-align:center;border-radius:5px;}
 #back .content{padding:5px;background:white;border-radius: 5px;}
 #back ul li{ margin-right:20px; padding-top:25px; line-height:30px;}
 #back ul li a{color:#000;}

@@ -12,10 +12,14 @@ $(function(){
 		}
 	}
     function setYYn(){
+        var yy = $("#yy");
+        var yyP = $("#yyP");
         yyP.css("display","block");
         yy.css("display","none");
     }
     function setYYy(){
+        var yy = $("#yy");
+        var yyP = $("#yyP");
         yy.css("display","block");
         yyP.css("display","none");
     }
@@ -41,8 +45,8 @@ $(function(){
 	$('.login').click(function(){
 		setYYn();
 		$("body").append("<div id='mask'></div>");  
-		$("#mask").addClass("mask").fadeIn("slow"); //使用雾罩把屏幕罩住
-		$('#log').fadeIn("slow");
+		$("#mask").addClass("mask").show(); //使用雾罩把屏幕罩住
+		$('#log').show();
 	});
 	//关闭按钮鼠标滑过
 	$('.close').mouseover(function(){
@@ -53,8 +57,8 @@ $(function(){
 	});
 	$('.close').click(function(){
 		setYYy();
-		$("#mask").fadeOut("slow");
-		$('#log').fadeOut("slow");
+		$("#mask").hide();
+		$('#log').hide();
 	});
 //公告
 
@@ -80,8 +84,8 @@ $(function(){
 	$("marquee[class='gGao']").click(function(){
 		setYYn();		
 		$("body").append("<div id='mask'></div>");  
-		$("#mask").addClass("mask").fadeIn("slow"); //使用雾罩把屏幕罩住
-		$('#gGaoLog').fadeIn("slow");
+		$("#mask").addClass("mask").show(); //使用雾罩把屏幕罩住
+		$('#gGaoLog').show();
 	});
 	//关闭按钮鼠标滑过
 	$('.close').mouseover(function(){
@@ -92,8 +96,8 @@ $(function(){
 	});
 	$('.close').click(function(){
 		setYYy();
-		$("#mask1").fadeOut("slow");
-		$('#gGaoLog').fadeOut("slow");
+		$("#mask1").hide();
+		$('#gGaoLog').hide();
 	});
 
 //大转盘
@@ -119,8 +123,8 @@ $(function(){
     $("a[class='charge']").click(function(){
     	setYYn();
         $("body").append("<div id='mask'></div>");  
-        $("#mask").addClass("mask").fadeIn("slow"); //使用雾罩把屏幕罩住
-        $('.rotary').fadeIn("slow");
+        $("#mask").addClass("mask").show(); //使用雾罩把屏幕罩住
+        $('.rotary').show();
     });
     //关闭按钮鼠标滑过
     $('.close').mouseover(function(){
@@ -131,8 +135,8 @@ $(function(){
     });
     $('.close').click(function(){
     	setYYy();
-        $("#mask1").fadeOut("slow");
-        $('.rotary').fadeOut("slow");
+        $("#mask1").hide();
+        $('.rotary').hide();
     });
 
 
@@ -159,8 +163,8 @@ $(function(){
     $("li[class='editPwd']").click(function(){
     	setYYn();
         $("body").append("<div id='mask'></div>");  
-        $("#mask").addClass("mask").fadeIn("slow"); //使用雾罩把屏幕罩住
-        $('.pwdEdit').fadeIn("slow");
+        $("#mask").addClass("mask").show(); //使用雾罩把屏幕罩住
+        $('.pwdEdit').show();
     });
     //关闭按钮鼠标滑过
     $('.close').mouseover(function(){
@@ -171,8 +175,8 @@ $(function(){
     });
     $('.close').click(function(){
     	setYYy();
-        $("#mask").fadeOut("slow");
-        $('.pwdEdit').fadeOut("slow");
+        $("#mask").hide();
+        $('.pwdEdit').hide();
     });
 
 
@@ -199,8 +203,8 @@ $(function(){
     $("li[class='infoOwn']").click(function(){
     	setYYn();
         $("body").append("<div id='mask'></div>");  
-        $("#mask").addClass("mask").fadeIn("slow"); //使用雾罩把屏幕罩住
-        $('.ownInfo').fadeIn("slow");
+        $("#mask").addClass("mask").show(); //使用雾罩把屏幕罩住
+        $('.ownInfo').show();
     });
     //关闭按钮鼠标滑过
     $('.close').mouseover(function(){
@@ -211,8 +215,8 @@ $(function(){
     });
     $('.close').click(function(){
     	setYYy();
-        $("#mask").fadeOut("slow");
-        $('.ownInfo').fadeOut("slow");
+        $("#mask").hide();
+        $('.ownInfo').hide();
     });
 
     //系统消息

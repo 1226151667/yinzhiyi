@@ -63,14 +63,12 @@
 						系统
 					</a>
 					<ul>
+						<li><a href="<?php echo U('Index/column');?>">栏目</a></li>
 						<li><a href="<?php echo U('Index/announcement');?>">公告</a></li>
 						<li><a href="<?php echo U('Index/say');?>">喊单</a></li>
 						<li><a href="<?php echo U('Index/yy');?>">YY直播</a></li>
 						<li><a href="<?php echo U('Index/subjectTable');?>">课程表</a></li>
-						<li><a href="<?php echo U('Index/ipBanTable');?>">IP屏蔽</a></li>
 						<li><a href="<?php echo U('Index/systemTable');?>">系统消息</a></li>
-						<!-- <li><a href="#">抽奖记录</a></li> -->
-						<!-- <li><a href="#">短信记录</a></li> -->
 					</ul>       
 				</li>
 				<li> 

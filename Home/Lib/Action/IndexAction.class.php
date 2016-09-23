@@ -50,7 +50,7 @@ class IndexAction extends Action {
 				if($userInfo){
 					if($userInfo['pwd']==md5($pwd)){
 						if($userInfo['state']==1){
-							$this->error("不好意思，你的账号可能因为某些原因被禁止登陆了，如需解禁，请联系QQ 12639368",U("Index/index"));
+							$this->error("不好意思，你的账号可能因为某些原因被禁止登陆了，如需解禁，请联系QQ 12639368",U("Index/index"),5);
 						}
 						$_SESSION['userId'] = $userInfo['id'];
 						if(isset($_POST['psw'])){
@@ -105,12 +105,13 @@ class IndexAction extends Action {
 			$pwd = md5($pwd1);
 			$data = array(
 				'uname' => "{$uname}",
-				'nickname' => "{$nickName}",
+				'nickName' => "{$nickName}",
 				'pwd' => "{$pwd}",
 				'qq' => "{$qq}",
 				'phone' => "{$phone}",
 				'tm' => date("Y-m-d H:i:s"),
 				'ip' => "{$ip}",
+				'rankId' =>2
 			);
 			$rs = $obj->add($data);
 			if($rs){
@@ -174,7 +175,6 @@ class IndexAction extends Action {
 					}
 					unset($_SESSION['empUserId']);	
 				}
-				exit;
 				header("location:U('Index/index')");
 			}
 		}
@@ -436,6 +436,9 @@ class IndexAction extends Action {
 		$sysList = $system->where("isOnlined=1")->select();
 		//栏目
 		$colList = $column->select();
+		//清除今天之前的聊天记录
+		$now = date("Y-m-d 00:00:00");
+		$chat->where("tm<'{$now}'")->delete();
 
 		$this->assign("colList",$colList);
 		$this->assign("sysList",$sysList);

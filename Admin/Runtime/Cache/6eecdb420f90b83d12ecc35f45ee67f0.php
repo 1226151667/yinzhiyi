@@ -63,15 +63,12 @@
 						系统
 					</a>
 					<ul>
+						<li><a href="<?php echo U('Index/column');?>">栏目</a></li>
 						<li><a href="<?php echo U('Index/announcement');?>">公告</a></li>
 						<li><a href="<?php echo U('Index/say');?>">喊单</a></li>
 						<li><a href="<?php echo U('Index/yy');?>">YY直播</a></li>
 						<li><a href="<?php echo U('Index/subjectTable');?>">课程表</a></li>
-						<!-- <li><a href="<?php echo U('Index/ipBanTable');?>">IP屏蔽</a></li> -->
 						<li><a href="<?php echo U('Index/systemTable');?>">系统消息</a></li>
-						<li><a href="<?php echo U('Index/column');?>">栏目</a></li>
-						<!-- <li><a href="#">抽奖记录</a></li> -->
-						<!-- <li><a href="#">短信记录</a></li> -->
 					</ul>       
 				</li>
 				<li> 
@@ -108,13 +105,6 @@
 			</div>
 			<div class="content-box-content">
 				<div class="tab-content default-tab" id="tab1">
-<!-- 					<div class="tbTop" name="Index">ipban</div>
-					<div class="tbBody" name="ip">IP</div>
-					<div class="tbBody" name="nickname">昵称</div>
-					<div class="tbBody" name="group">分组</div>
-					<div class="tbBody" name="manageIp">操作者IP</div>
-					<div class="tbBody" name="tm">时间</div>
-					<div class="tbBody" name="note">备注</div>  -->
 					<div id="operate">
 <!-- 					   <input type="text" name="likeName" />
 					   <button class="search">搜&nbsp;&nbsp;&nbsp;索</button>
@@ -261,12 +251,12 @@ $(function(){
 	// });
 	//添加or修改
 	$("button[name='sub']").click(function(){
-		var type = $("select[name='type']").val();
-		var cWei = $("input[name='cWei']").val();
-		var good = $("select[name='good']").val();
-		var openPrice = $("input[name='openPrice']").val();
-		var endPrice = $("input[name='endPrice']").val();
-		var sucPrice = $("input[name='sucPrice']").val();
+		var type = $("select[name='type']").val().trim();
+		var cWei = $("input[name='cWei']").val().trim();
+		var good = $("select[name='good']").val().trim();
+		var openPrice = $("input[name='openPrice']").val().trim();
+		var endPrice = $("input[name='endPrice']").val().trim();
+		var sucPrice = $("input[name='sucPrice']").val().trim();
 		if(type=="" || cWei=="" || good=="" || openPrice=="" || endPrice=="" || sucPrice==""){
 			alert("所有带*号项都必填");
 		}else{
