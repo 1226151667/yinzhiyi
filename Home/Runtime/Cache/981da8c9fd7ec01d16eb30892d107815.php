@@ -16,21 +16,16 @@
     	<font>欢迎注册富升财经直播间</font>
 		<form method="post" action="<?php echo U('Index/enroll');?>">
 			<ul>
-				<li><input name="uname" class="enroll_i" type="text" placeholder="用户名"></li>
-				<li>
-					<input name="nickName" class="enroll_i" type="text" placeholder="昵称">
+				<li><input style="width:47%;float:left;" name="uname" class="enroll_i" type="text" placeholder="用户名">
+					<input style="width:47%;float:left;" name="nickName" class="enroll_i" type="text" placeholder="昵称">
 				</li>
 				<li>
-					<input name="pwd1" class="enroll_i" type="password" placeholder="密码">
+					<input style="width:47%;float:left;" name="pwd1" class="enroll_i" type="password" placeholder="密码">
+					<input style="width:47%;float:left;" name="pwd2" class="enroll_i" type="password" placeholder="确认密码">
 				</li>
 				<li>
-					<input name="pwd2" class="enroll_i" type="password" placeholder="确认密码">
-				</li>
-				<li>
-					<input name="qq" class="enroll_i" type="text" placeholder="QQ">
-				</li>
-				 <li>
-					<input name="phone" class="enroll_i" type="text" placeholder="手机">
+					<input style="width:47%;float:left;" name="qq" class="enroll_i" type="text" placeholder="QQ">
+					<input style="width:47%;float:left;" name="phone" class="enroll_i" type="text" placeholder="手机">
 				</li>
 			</ul>
 			<div class="erl-register-footer">
