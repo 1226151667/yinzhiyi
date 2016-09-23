@@ -46,7 +46,7 @@
 			<div id="profile-links">
 				欢迎回来, 
 				<a href="#" title="Edit your profile"><?php echo $uname;?></a><br /><br />
-				<a href="/yinzhiyi/index.php" title="View the Site">网站首页</a> | <a href="<?php echo U('Index/logout');?>" title="登出">登出</a>
+				<a target="_blank" href="<?php echo __ROOT__.'/index.php';?>" title="View the Site">网站首页</a> | <a href="<?php echo U('Index/logout');?>" title="登出">登出</a>
 			</div>        
 			<ul id="main-nav">
 				<li>
@@ -63,14 +63,12 @@
 						系统
 					</a>
 					<ul>
+						<li><a href="<?php echo U('Index/column');?>">栏目</a></li>
 						<li><a href="<?php echo U('Index/announcement');?>">公告</a></li>
 						<li><a href="<?php echo U('Index/say');?>">喊单</a></li>
 						<li><a href="<?php echo U('Index/yy');?>">YY直播</a></li>
 						<li><a href="<?php echo U('Index/subjectTable');?>">课程表</a></li>
-						<li><a href="<?php echo U('Index/ipBanTable');?>">IP屏蔽</a></li>
 						<li><a href="<?php echo U('Index/systemTable');?>">系统消息</a></li>
-						<li><a href="#">抽奖记录</a></li>
-						<li><a href="#">短信记录</a></li>
 					</ul>       
 				</li>
 				<li> 
@@ -92,15 +90,6 @@
 						<li><a href="<?php echo U('Index/empUserType');?>">管理员分组</a></li>
 					</ul>
 				</li>
-				<li>
-					<a href="#" class="nav-top-item">
-						功能
-					</a>
-					<ul>
-						<li><a href="#">添加新的类别</a></li>
-						<li><a href="#">管理文章类别</a></li>
-					</ul>
-				</li>
 			</ul>
 		</div>
 	</div>
@@ -116,13 +105,6 @@
 			</div>
 			<div class="content-box-content">
 				<div class="tab-content default-tab" id="tab1">
-<!-- 					<div class="tbTop" name="Index">ipban</div>
-					<div class="tbBody" name="ip">IP</div>
-					<div class="tbBody" name="nickname">昵称</div>
-					<div class="tbBody" name="group">分组</div>
-					<div class="tbBody" name="manageIp">操作者IP</div>
-					<div class="tbBody" name="tm">时间</div>
-					<div class="tbBody" name="note">备注</div>  -->
 					<div id="operate">
 					   <input type="text" name="likeName" />
 					   <button class="search">搜&nbsp;&nbsp;&nbsp;索</button>
