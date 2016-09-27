@@ -90,7 +90,7 @@ a{filter:alpha(opacity=100); -moz-opacity:1; opacity:1;}
             <div class="collapse navbar-collapse navbar-ex1-collapse">        
                 <ul class="nav navbar-nav ">
                     <li class="active">
-                        <a href="#"><img src="__PUBLIC__/images/diann.png">&nbsp;&nbsp;保存到桌面</a>
+                        <a href="<?php echo U('Index/download');?>" target="_blank"><img src="__PUBLIC__/images/diann.png">&nbsp;&nbsp;保存到桌面</a>
                     </li>
                     <li class="active">
                         <a href="http://zhibo.yohocat.com/index/index.html">
@@ -169,7 +169,7 @@ a{filter:alpha(opacity=100); -moz-opacity:1; opacity:1;}
                     </tr>
                     <tr>
                         <td style="width:100%; padding-left:1%;">
-                            <a href="#">
+                            <a>
                                 <img src="__PUBLIC__/images/erweima.png">
                             </a>
                         </td>
@@ -178,10 +178,10 @@ a{filter:alpha(opacity=100); -moz-opacity:1; opacity:1;}
                 <div id="tab">
                     <ul id="tab_wz" class="clearfix">
                         <li>
-                            <a class="hover" href="#">在线会员<br>（<?php echo $baseInfo['onlineCnt'];?>）</a>
+                            <a class="hover">在线会员<br>（<?php echo $baseInfo['onlineCnt'];?>）</a>
                         </li>
                         <li>
-                            <a href="#">我的客服<br>（0）</a>
+                            <a>我的客服<br>（0）</a>
                         </li>
                     </ul>
                     <ul id="tab_img">
