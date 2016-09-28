@@ -297,7 +297,7 @@ class IndexAction extends Action {
 		//在线用户
 		if(isset($_GET['onlineUser'])){
 			if($_GET['onlineUser']=="ok"){
-				$now = date("Y-m-d H:i:s",strtotime("-3 second"));
+				$now = date("Y-m-d H:i:s",strtotime("-60 second"));
 				$onLineUser = $loginRecord->alias("t0")->field("(case type when 0 then '/yinzhiyi/Home/Public/images/User14.png' when 2 then (select r.aFilePath from empuser e left join rank r on r.id=e.rankId where t0.userId=e.id) else (select r.aFilePath from user u left join rank r on r.id=u.rankId where t0.userId=u.id) end) as userPic,(case type when 0 then (select t.uname from tmpuser t where t0.userId=t.id) when 2 then (select e.nickName from empuser e where t0.userId=e.id) else (select u.nickName from user u where t0.userId=u.id) end) as userName")->where("t0.endTm>'{$now}'")->select();
 				foreach ($onLineUser as $k1=>$v1) {
 					foreach ($onLineUser as $k2=>$v2) {
@@ -420,9 +420,13 @@ class IndexAction extends Action {
 		$this->assign('chatList',$chatList);
 		//登录记录
 		$lastTm = $loginRecord->field("endTm")->order("id desc")->where("userId={$userId} and type={$userType}")->find();
-		$time1 = strtotime($lastTm['endTm']);
-		if(($time1+5)<time()){
+		if(empty($lastTm)){
 			$loginRecord->add($data);	
+		}else{
+			$time1 = strtotime($lastTm['endTm']);
+			if(($time1+5)<time()){
+				$loginRecord->add($data);	
+			}
 		}
 		//yy号
 		$yyH = $yy->find();
